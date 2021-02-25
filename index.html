@@ -1,4 +1,3 @@
-  
 <!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
 <!DOCTYPE html>
 <!-- Оболочка документа, указываем язык содержимого -->
@@ -6,101 +5,117 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=1400">
   <title>Турнирная сетка международных футбольных матчей</title>
-  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/normadivze.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-<main>
-<ul class="tournament-grid">
-<li class="tournament-grid__item item">
-<div class="item__team team">
-<img src="img/se.png" class="team__flag" alt="Флаг Швеции" width="150" height="100">
-<p class="team__text">
-Швеция
-</p> 
-<p class="team__text">
-2
-</p>
-</div>
-<div class="item__team team">
-<img src="img/ru.png" class="team__flag" alt="Флаг России" width="150" height="100">
-<p class="team__text">
-Россия
-</p> 
-<p class="team__text">
-3
-</p>
-</div>
-</li>
-<li class="tournament-grid__item item">
-<div class="item__team team">
-<img src="img/ar.png" class="team__flag" alt="Флаг Аргентины" width="150" height="100">
-<p class="team__text">
-Аргетина
-</p> 
-<p class="team__text">
-5
-</p>
-</div>
-<div class="item__team team">
-<img src="img/ua.png" class="team__flag" alt="Флаг Украины" width="150" height="100">
-<p class="team__text">
-Украина
-</p> 
-<p class="team__text">
-1
-</p>
-</div>
-</li>
-<li class="tournament-grid__item item">
-<div class="item__team team">
-<img src="img/br.png" class="team__flag" alt="Флаг Бразилии" width="150" height="100">
-<p class="team__text">
-Бразилия
-</p> 
-<p class="team__text">
-3
-</p>
-</div>
-<div class="item__team team">
-<img src="img/cz.png" class="team__flag" alt="Флаг Чехии" width="150" height="100">
-<p class="team__text">
-Чехия
-</p> 
-<p class="team__text">
-2
-</p>
-</div>
-</li>
-<li class="tournament-grid__item item">
-<div class="item__team team">
-<img src="img/gr.png" class="team__flag" alt="Флаг Греции" width="150" height="100">
-<p class="team__text">
-Греция
-</p> 
-<p class="team__text">
-3
-</p>
-</div>
-<div class="item__team team">
-<img src="img/tr.png" class="team__flag" alt="Флаг Турции" width="150" height="100">
-<p class="team__text">
-Турция
-</p> 
-<p class="team__text">
-0
-</p>
-</div>
-</li>
-
-</ul>
-
-
-
-</main>
+  <main class="main">
+    <section class="tournament-grid">
+      <h1 class="visually-hidden">Турнирная сетка международных футбольных матчей</h1>
+      <div class="tournament-grid__stage">
+        <h2 class="tournament-grid__title">1/4</h2>
+        <div class="tournament-grid__item item">
+          <div class="item__team team team--left-side">
+            <img src="img/se.png" class="team__flag team__flag--left-side" alt="Флаг Швеции" width="90" height="60">
+            <p class="team__text team__text--team"> Швеция </p>
+            <p class="team__text team__text--score"> 2 </p>
+          </div>
+          <div class="item__team team team--left-side">
+            <img src="img/ru.png" class="team__flag team__flag--left-side" alt="Флаг России" width="90" height="60">
+            <p class="team__text team__text--team"> Россия </p>
+            <p class="team__text team__text--score"> 3 </p>
+          </div>
+        </div>
+        <div class="tournament-grid__item item">
+          <div class="item__team team team--left-side">
+            <img src="img/ar.png" class="team__flag team__flag--left-side" alt="Флаг Аргентины" width="90" height="60">
+            <p class="team__text team__text--team"> Аргетина </p>
+            <p class="team__text team__text--score"> 5 </p>
+          </div>
+          <div class="item__team team team--left-side">
+            <img src="img/ua.png" class="team__flag team__flag--left-side" alt="Флаг Украины" width="90" height="60">
+            <p class="team__text team__text--team"> Украина </p>
+            <p class="team__text team__text--score"> 1 </p>
+          </div>
+        </div>
+      </div>
+      <div class="tournament-grid__stage">
+        <h2 class="tournament-grid__title">1/2</h2>
+        <div class="tournament-grid__item item">
+          <div class="item__team team team--left-side">
+            <img src="img/ru.png" class="team__flag team__flag--left-side" alt="Флаг России" width="90" height="60">
+            <p class="team__text team__text--team"> Россия </p>
+            <p class="team__text team__text--score"> 3 </p>
+          </div>
+          <div class="item__team team team--left-side">
+            <img src="img/ar.png" class="team__flag team__flag--left-side" alt="Флаг Аргентины" width="90" height="60">
+            <p class="team__text team__text--team"> Аргентина </p>
+            <p class="team__text team__text--score"> 2 </p>
+          </div>
+        </div>
+      </div>
+      <div class="tournament-grid__stage">
+        <h2 class="tournament-grid__title">Финал</h2>
+        <div class="tournament-grid__item item item--final-stage">
+          <div class="item__team team team--final-stage ">
+            <img src="img/ru.png" class="team__flag team__flag--left-side" alt="Флаг России" width="90" height="60">
+            <p class="team__text team__text--team"> Россия </p>
+            <p class="team__text team__text--score"> 3 </p>
+          </div>
+          <div class="item__team team team--final-stage">
+            <p class="team__text team__text--score"> 5 </p>
+            <p class="team__text team__text--team team__text--champ"> Греция </p>
+            <img src="img/gr.png" class="team__flag" alt="Флаг Греции" width="90" height="60">
+          </div>
+        </div>
+      </div>
+      <div class="tournament-grid__stage">
+        <h2 class="tournament-grid__title">1/2</h2>
+        <div class="tournament-grid__item item">
+          <div class="item__team team team--right-side">
+            <p class="team__text team__text--score"> 1 </p>
+            <p class="team__text team__text--team"> Бразилия </p>
+            <img src="img/br.png" class="team__flag" alt="Флаг Бразилии" width="90" height="60">
+          </div>
+          <div class="item__team team team--right-side">
+            <p class="team__text team__text--score"> 4 </p>
+            <p class="team__text team__text--team"> Греция </p>
+            <img src="img/gr.png" class="team__flag" alt="Флаг Греции" width="90" height="60">
+          </div>
+        </div>
+      </div>
+      <div class="tournament-grid__stage">
+        <h2 class="tournament-grid__title">1/4</h2>
+        <div class="tournament-grid__item item">
+          <div class="item__team team team--right-side">
+            <p class="team__text team__text--score"> 3 </p>
+            <p class="team__text team__text--team"> Бразилия </p>
+            <img src="img/br.png" class="team__flag" alt="Флаг Бразилии" width="90" height="60">
+          </div>
+          <div class="item__team team team--right-side">
+            <p class="team__text team__text--score"> 2 </p>
+            <p class="team__text team__text--team"> Чехия </p>
+            <img src="img/cz.png" class="team__flag" alt="Флаг Чехии" width="90" height="60">
+          </div>
+        </div>
+        <div class="tournament-grid__item item">
+          <div class="item__team team team--right-side">
+            <p class="team__text team__text--score"> 3 </p>
+            <p class="team__text team__text--team"> Греция </p>
+            <img src="img/gr.png" class="team__flag" alt="Флаг Греции" width="90" height="60">
+          </div>
+          <div class="item__team team team--right-side">
+            <p class="team__text team__text--score"> 0 </p>
+            <p class="team__text team__text--team"> Турция </p>
+            <img src="img/tr.png" class="team__flag" alt="Флаг Турции" width="90" height="60">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 
 </html>

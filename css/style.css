@@ -1,8 +1,22 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/opensans.woff2") format("woff2"), url("../fonts/opensans.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff") format("woff");
+  font-weight: 600;
+  font-display: swap;
+}
 /* Указываем box sizing */
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /* Убираем внутренние отступы */
@@ -44,15 +58,15 @@ ol[class] {
 }
 
 /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
-a:link {
-  color: #000000;
-
-  text-decoration: none;
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
 }
 
 /* Упрощаем работу с изображениями */
 img {
-
+  max-width: 100%;
+  display: block;
 }
 
 /* Указываем понятную периодичность в потоке данных у article*/
@@ -68,30 +82,87 @@ select {
   font: inherit;
 }
 
+/* Убираем оформление textarea */
+textarea {
+  resize: none;
+}
+
 /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
 @media (prefers-reduced-motion: reduce) {
   * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+         -o-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 }
-
-  
-@charset "UTF-8";
-
-@font-face {
-  font-family: "Open Sans";
-  src: url("../fonts/open-sans.woff2") format("woff2"), url("../fonts/open-sans.woff") format("woff");
-  font-weight: 400;
-  font-display: swap;
+.team {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
 }
-@font-face {
-  font-family: "Open Sans";
-  src: url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff") format("woff");
-  font-weight: 600;
-  font-display: swap;
+.team:last-child {
+  margin-bottom: 0;
+  margin-right: 0;
+}
+.team--final-stage {
+  margin-bottom: 0;
+  margin-right: 40px;
+}
+.team--right-side {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.team__flag {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 60%;
+          flex: 0 1 60%;
+  border-radius: 12px;
+}
+.team__flag--left-side {
+  margin-right: 10px;
+}
+
+.team__text {
+  margin-right: 10px;
+}
+.team__text:last-child {
+  margin-right: 0;
+}
+.team__text--team {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 39%;
+          flex: 0 1 39%;
+}
+.team__text--score {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 1%;
+          flex: 0 1 1%;
+}
+.team__text--champ {
+  position: relative;
+}
+.team__text--champ:before {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 68px;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
+  background-image: url("../img/cup.png");
 }
 
 .visually-hidden {
@@ -102,25 +173,56 @@ select {
   margin: -1px;
 }
 
-body{
-font-family: Open Sans;
-font-weight: 400;
-font-size: 16px;
-text-transform:uppercase;
+.item {
+  padding: 20px;
+  border: 1px solid #c7c7c7;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+.item--final-stage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
 
+.tournament-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 2fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
 }
-.team{
-display: flex;
-flex-wrap: wrap;
-align-items: center;
-margin-bottom: 10px;
+
+.tournament-grid__title {
+  text-align: center;
 }
-.team__flag{
-margin-right: 10px;
+
+.main {
+  min-height: 100%;
+  width: 1400px;
 }
-.team__text{
-margin-right: 10px;
+
+html,
+body {
+  min-width: 1400px;
 }
-.team__text:last-child{
-margin-right: 0;
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: Open Sans;
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  padding: 20px 30px;
 }

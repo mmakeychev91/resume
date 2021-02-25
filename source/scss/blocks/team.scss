@@ -1,0 +1,59 @@
+.team {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+
+  &--final-stage {
+    margin-bottom: 0;
+    margin-right: 40px;
+  }
+
+  &--right-side {
+    justify-content: flex-end;
+  }
+}
+
+.team__flag {
+  flex: 0 1 60%;
+  border-radius: 12px;
+
+  &--left-side {
+    margin-right: 10px;
+  }
+}
+
+.team__text {
+  margin-right: 10px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &--team {
+    flex: 0 1 39%;
+  }
+
+  &--score {
+    flex: 0 1 1%;
+  }
+
+  &--champ {
+    position: relative;
+  }
+
+  &--champ:before {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 68px;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    background-image: url("../img/cup.png");
+  }
+}
